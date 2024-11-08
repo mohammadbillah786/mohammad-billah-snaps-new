@@ -1,0 +1,22 @@
+@use "../../styles/partials/global" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $sage;
+
+    .tags__item {
+        font-family: "Outfit";
+        border: solid 2px $forest-green;
+        background-color: $white;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        padding: 0.25rem;
+        margin: 0.25rem;
+    }
+
+}

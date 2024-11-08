@@ -1,0 +1,58 @@
+//Variables 
+$sea-green: #EFFAF7;
+$forest-green: #1E6655;
+$black: #0C1E1A;
+$pistachio: #EFFAF7;
+$sage: #E4EFEC;
+$white: #FFFFFF;
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../../assets/font/Newsreader-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Newsreader-italics";
+  src: url("../../assets/font/Newsreader-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Newsreader-Light";
+  src: url("../../assets/font/Newsreader-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../../assets/font/Outfit-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Outfit-light";
+  src: url("../../assets/font/Outfit-Light.woff") format("woff");
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
+
+* {
+    background-color: $sea-green;
+    margin: 0;
+}
+
+h1 {
+  font-family: "Newsreader", serif;
+}
+
+h2 {
+  font-family: "Outfit", serif;
+}
+

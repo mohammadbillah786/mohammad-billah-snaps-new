@@ -1,0 +1,68 @@
+@use "../../styles/partials/global" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header__filterbutton {
+  font-family: "Outfit-light";
+}
+
+.colorFalse {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  font-size: 1rem;
+  font-family: "Outfit";
+  max-height: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+  background-color: $white;
+  color: #1e6655;
+  border-radius: 30px;
+  border: #1e6655 2px solid;
+  text-align: center;
+
+  &:hover {
+    color: white;
+    background-color: #1e6655;
+    
+  }
+
+  &:hover .navbarIcon {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.colorTrue {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  font-size: 1rem;
+  font-family: "Outfit";
+  max-height: auto;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+  color: $white;
+  background-color: $forest-green;
+  border-radius: 30px;
+  border: #1e6655 2px solid;
+  text-align: center;
+
+  .navbarIcon{
+    filter: brightness(0) invert(1);
+  }
+
+}
+.navbarIcon {
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+  background-color: transparent;
+}
