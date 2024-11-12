@@ -1,6 +1,157 @@
+// @use "../../styles/partials/global" as *;
+
+// .single-photo-view-unique {
+//   margin: 2rem auto;
+//   max-width: 600px;
+//   padding: 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1.5rem;
+//   box-sizing: border-box;
+// }
+
+// .photo-item-unique {
+//   position: relative;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   box-sizing: border-box;
+//   width: 100%;
+// }
+
+// .photo-unique {
+//   width: 100%;
+//   border: #B7CEC9 2px solid;
+//   border-radius: 16px;
+// }
+
+// .photo-info-unique {
+//   box-sizing: border-box;
+//   border: solid 2px $pistachio;
+//   position: absolute;
+//   bottom: -50px;
+//   left: 1px;
+//   display: flex;
+//   justify-content: flex-start;
+//   padding: 10px;
+//   background: #E4EFEC;
+//   border-bottom-left-radius: 16px;
+//   border-bottom-right-radius: 16px;
+//   z-index: 15;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+// }
+
+// .likes-unique {
+//   font-weight: normal;
+//   color: #333;
+//   background-color: $sage;
+// }
+
+// .photo-info__subcontainer {
+//   padding-top: 0.25rem;
+//   background-color: $sage;
+//   display: flex;
+//   justify-content: space-between;
+//   flex-wrap: wrap;
+// }
+
+// .tags-container-unique {
+//   display: flex;
+//   gap: 5px;
+//   flex-wrap: wrap;
+//   justify-content: flex-start;
+//   margin-right: auto;
+//   background-color: $sage;
+// }
+
+// .tag-unique {
+//   background-color: white;
+//   color: black;
+//   padding: 3px 8px;
+//   border-radius: 8px;
+//   font-size: 0.8rem;
+//   max-height: fit-content;
+//   border: #B7CEC9 solid 2px;
+// }
+
+// .photo-description-unique {
+//   display: flex;
+//   flex-basis: 100%;
+//   font-size: 1rem;
+//   font-family: "Outfit";
+//   text-align: center;
+//   color: #333;
+//   background-color: $sage;
+// }
+
+// .comments-section-unique {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 1rem;
+//   margin-top: 3rem;
+//   padding-bottom: 0.5rem;
+//   border-bottom: solid 2px $pistachio;
+// }
+
+// .comment-unique {
+//   border-top: solid 2px $pistachio;
+//   padding-top: 0.5rem;
+
+// }
+
+// .comment-name-unique {
+//   font-weight: normal;
+//   margin-bottom: 0.25rem;
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .comment-text-unique {
+//   font-size: 0.9rem;
+//   color: #555;
+// }
+
+// .comment-date-unique {
+//   font-weight: normal;
+// }
+
+// .comment-form-unique {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 0.5rem;
+//   margin-bottom: 1rem;
+// }
+
+// .comment-input-unique {
+//   background-color: $white;
+//   padding: 0.5rem;
+//   border: 1px solid $pistachio;
+//   border-radius: 8px;
+// }
+
+// .comment-submit-unique {
+//   align-self: flex-start;
+//   padding: 0.5rem 1rem;
+//   background-color: #333;
+//   color: #fff;
+//   border: none;
+//   border-radius: 8px;
+//   cursor: pointer;
+//   transition: background-color 0.3s;
+// }
+
+// .comment-submit-unique:hover {
+//   background-color: #555;
+// }
+
+// .date-unique {
+//   background-color: $sage;
+// }
 @use "../../styles/partials/global" as *;
 
-.single-photo-view-unique {
+.photo {
   margin: 2rem auto;
   max-width: 600px;
   padding: 1rem;
@@ -8,144 +159,124 @@
   flex-direction: column;
   gap: 1.5rem;
   box-sizing: border-box;
-}
 
-.photo-item-unique {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  width: 100%;
-}
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
-.photo-unique {
-  width: 100%;
-  border: #B7CEC9 2px solid;
-  border-radius: 16px;
-}
+  &__image {
+    width: 99%;
+    border: #B7CEC9 2px solid;
+    border-radius: 16px;
+    margin-bottom: 8px;  // Add space between image and info section
+  }
 
-.photo-info-unique {
-  box-sizing: border-box;
-  border: solid 2px $pistachio;
-  position: absolute;
-  bottom: -50px;
-  left: 1px;
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
-  background: #E4EFEC;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 0;
+    background: #E4EFEC;
+    border: solid 2px $pistachio;
+    border-top: none;  // Avoids double border between image and info section
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    box-sizing: border-box;
+    position: relative;
+    top: -30px;
+  }
 
-.likes-unique {
-  font-weight: normal;
-  color: #333;
-  background-color: $sage;
-}
+  &__subcontainer {
+    padding-top: 0.25rem;
+    background-color: $sage;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-.photo-info__subcontainer {
-  padding-top: 0.25rem;
-  background-color: $sage;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+  &__likes,
+  &__date {
+    background-color: $sage;
+  }
 
-.tags-container-unique {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-right: auto;
-  background-color: $sage;
-}
+  &__description {
+    font-size: 1rem;
+    font-family: "Outfit";
+    color: #333;
+    background-color: $sage;
+  }
 
-.tag-unique {
-  background-color: white;
-  color: black;
-  padding: 3px 8px;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  max-height: fit-content;
-  border: #B7CEC9 solid 2px;
-}
+  &__tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-right: auto;
+    background-color: $sage;
+  }
 
-.photo-description-unique {
-  display: flex;
-  flex-basis: 100%;
-  font-size: 1rem;
-  font-family: "Outfit";
-  text-align: center;
-  color: #333;
-  background-color: $sage;
-}
+  &__tag {
+    background-color: white;
+    color: black;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border: #B7CEC9 solid 2px;
+  }
 
-.comments-section-unique {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 3rem;
-  padding-bottom: 0.5rem;
-  border-bottom: solid 2px $pistachio;
-}
+  &__comments {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding-bottom: 0.5rem;
+    border-bottom: solid 2px $pistachio;
+  }
 
-.comment-unique {
-  border-top: solid 2px $pistachio;
-  padding-top: 0.5rem;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-}
+  &__input {
+    padding: 0.5rem;
+    border: 1px solid $pistachio;
+    border-radius: 8px;
+  }
 
-.comment-name-unique {
-  font-weight: normal;
-  margin-bottom: 0.25rem;
-  display: flex;
-  justify-content: space-between;
-}
+  &__submit {
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 
-.comment-text-unique {
-  font-size: 0.9rem;
-  color: #555;
-}
+    &:hover {
+      background-color: #555;
+    }
+  }
 
-.comment-date-unique {
-  font-weight: normal;
-}
+  &__comment {
+    border-top: solid 2px $pistachio;
+    padding-top: 0.5rem;
+  }
 
-.comment-form-unique {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
+  &__comment-name {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.comment-input-unique {
-  background-color: $white;
-  padding: 0.5rem;
-  border: 1px solid $pistachio;
-  border-radius: 8px;
-}
+  &__comment-text {
+    font-size: 0.9rem;
+    color: #555;
+  }
 
-.comment-submit-unique {
-  align-self: flex-start;
-  padding: 0.5rem 1rem;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.comment-submit-unique:hover {
-  background-color: #555;
-}
-
-.date-unique {
-  background-color: $sage;
+  &__comment-date {
+    font-weight: normal;
+  }
 }

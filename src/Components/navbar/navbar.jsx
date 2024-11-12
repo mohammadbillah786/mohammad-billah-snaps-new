@@ -19,9 +19,9 @@ export default function Navbar({ filterOpen, setFilterOpen}) {
   }
 
   return (
-    <div className="header">
+    <section className="header">
       <h1 onClick={handleClick2}> Snaps </h1>
-      <button onClick={handleClick} className={filterOpen ? "colorTrue" : "colorFalse"}> Filter<img className="navbarIcon" src={FilterIcon}></img> </button>
-    </div>
+      <button onClick={handleClick} className={filterOpen ? "colorTrue" : "colorFalse"}> Filter<img className="header__icon" src={FilterIcon}></img> </button>
+    </section>
   )
 }

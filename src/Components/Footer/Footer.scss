@@ -1,27 +1,41 @@
-.header {
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    font-family: "Newsreader";
-    font-weight: 300;
+.footer {
+    &__header {
+        padding-bottom: 2rem;
+        padding-left: 1rem;
+        font-family: "Newsreader";
+        font-weight: 300;
+    }
+
+    &__description {
+        font-weight: 300;
+        padding-top: 0.15rem;
+        padding-bottom: 0.15rem;
+        padding-left: 1rem;
+    }
+
+    &__break {
+        color: transparent;
+    }
+
+    &__icons {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        display: flex;
+        gap: 5%;
+        padding-left: 1rem;
+    }
+
+    &__icon {
+        // Additional styles for individual icons can go here if needed
+    }
+
+    &__copyright {
+        font-weight: 300;
+        padding-left: 1rem;
+    }
+
+    &__dot,
+    &__link {
+        padding-left: 0.5rem;
+    }
 }
-
-.description {
-    font-weight: 300;
-    padding-top: 0.15rem;
-    padding-bottom: 0.15rem;
-    padding-left: 1rem;
-}
-
-.break {
-    color: transparent;
-}
-
-.icons {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    display: flex;
-    gap: 5%;
-    padding-left: 1rem;
-
-}
-
