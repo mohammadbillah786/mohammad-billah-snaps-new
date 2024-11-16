@@ -1,27 +1,81 @@
-.header {
-    padding-bottom: 2rem;
+@use "../../styles/partials/global" as *;
+.footer {
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  &__bottom {
+    padding-left: 1rem;
+  }
+  &__footer-header {
     padding-left: 1rem;
     font-family: "Newsreader";
     font-weight: 300;
-}
+  }
 
-.description {
-    font-weight: 300;
+  &__description {
+    font-weight: normal;
     padding-top: 0.15rem;
     padding-bottom: 0.15rem;
-    padding-left: 1rem;
-}
+  }
 
-.break {
+  &__break {
     color: transparent;
-}
+  }
 
-.icons {
+  &__icons {
     padding-top: 2rem;
     padding-bottom: 1rem;
     display: flex;
     gap: 5%;
+  }
+
+  &__copyright {
+    font-weight: 300;
     padding-left: 1rem;
+  }
+
+  &__dot,
+  &__link {
+    padding-left: 0.5rem;
+  }
+
+  &__bottom {
+    color: $pistachio;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50%;
+
+    &__bigger-section {
+      display: flex;
+      gap: 10px;
+    }
+    &__icons {
+        padding-top: 5rem;
+        display: flex;
+        gap: 10%;
+  }
+}
+    @include desktop {
+        display: flex;
+        gap:0;
+
+        &__icons {
+            padding-top: 0;
+            height: 10%;
+            margin-left: 10rem;
+
+        }
+
+        &__bigger-section {
+            padding-left: 49rem;
+        }
+
+        &__bottom {
+            padding-top: 5rem;
+        }
+    }
 
 }
-

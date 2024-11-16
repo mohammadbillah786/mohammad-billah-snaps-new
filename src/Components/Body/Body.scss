@@ -4,119 +4,129 @@
     font-family: "Outfit";
 }
 
-.FilterSection {
-    display: flex;
-    flex-direction: column;
-}
-
-.photosGallery {
-    @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2%;
-        justify-content: center;
-    }
-}
-
-
-.photosContainer {
+.photos-container {
     padding-top: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        padding-bottom: 1rem;
+        font-weight: 300;
+        font-family: "Outfit";
+    }
+
+    &__mission-statement {
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 38px;
+        padding-bottom: 3rem;
+        font-family: "Newsreader-light";
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &--italic {
+            font-weight: 300;
+            font-family: "Newsreader-italics";
+        }
+    }
+
+    &__filter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__filter-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__filter-item {
+        padding: 5px 10px;
+        cursor: pointer;
+
+        &--active {
+            font-weight: bold;
+            background-color: #E4EFEC;
+        }
+    }
+}
+
+.photos-gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-
-}
-
-.photoItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    max-width: 100%;
-    padding-top: 1rem;
-    box-sizing: border-box
-    
-}
-
-.photos {
-    width: 100%;
-    border: #B7CEC9 2px solid;
-    border-bottom: none;
-    border-radius: 16px;
+    justify-content: center;
 
     @include tablet {
-        width: 22rem;
+        gap: 2%;
     }
 
-    @include desktop {
-        width: 27rem;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        max-width: 100%;
+        padding-top: 1rem;
+        box-sizing: border-box;
+    }
+
+    &__image {
+        width: 100%;
+        border: #B7CEC9 2px solid;
+        border-bottom: none;
+        border-radius: 16px;
+
+        @include tablet {
+            width: 22rem;
+        }
+
+        @include desktop {
+            width: 27rem;
+        }
+    }
+
+    &__photographer {
+        font-weight: 500;
+        position: absolute;
+        bottom: 37.5px;
+        right: 0;
+        color: black;
+        background-color: #E4EFEC;
+        padding: 5px 10px;
+        border-top-left-radius: 8px;
+        font-size: 0.9rem;
+        z-index: 10;
+        margin-bottom: 6px;
+    }
+
+    &__tags {
+        background-color: #E4EFEC;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+        width: 100%;
+        border: solid 2px #B7CEC9;
+        border-top: none;
+        box-sizing: border-box;
+        padding: 5px 8px 10px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        z-index: 5;
+    }
+
+    &__tag {
+        background-color: white;
+        color: black;
+        padding: 3px 8px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        max-height: fit-content;
+        border: #B7CEC9 solid 2px;
     }
 }
-
-.photographer {
-    font-weight: 500;
-    position: absolute;
-    bottom: 37.5px; 
-    right: 0;
-    color: black;
-    background-color: #E4EFEC;
-    padding: 5px 10px;
-    border-top-left-radius: 8px;
-    font-size: 0.9rem;
-    z-index: 10; 
-    margin-bottom: 6px;
-}
-
-.tagsContainer {
-    background-color: #E4EFEC;
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex-wrap: wrap;
-    width: 100%;
-    border: solid 2px #B7CEC9;
-    border-top: none;
-    box-sizing: border-box;
-    padding: 5px 8px 10px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    z-index: 5; 
-}
-
-.tag {
-    background-color: white;
-    color: black;
-    padding: 3px 8px;
-    border-radius: 8px;
-    font-size: 0.8rem;
-    max-height: fit-content;
-    border: #B7CEC9 solid 2px;
-
-}
-
-.bodyheader {
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    font-weight: 300;
-    font-family: "Outfit";
-}
-
-.missionstatement {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-weight: 300;
-    font-size: 2rem;
-    line-height: 38px;
-    padding-bottom: 3rem;
-    font-family: "Newsreader-light";
-}
-
-.italicized-ms {
-    font-weight: 300;
-    font-family: "Newsreader-italics";
-}
-

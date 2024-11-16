@@ -13,7 +13,6 @@ dist-ssr
 *.local
 eslint.config.js
 README.md 
-vite.config.js 
 
 
 # Editor directories and files
@@ -26,3 +25,7 @@ vite.config.js
 *.njsproj
 *.sln
 *.sw?
+
+
+.env
+index.css
