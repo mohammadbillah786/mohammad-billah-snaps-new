@@ -1,10 +1,10 @@
 import './App.scss';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
-import Navbar from './Components/navbar/navbar';
-import FilterPanel from './Components/filterpanel/filterpanel';
-import Body from './Components/Body/Body';
-import Footer from './Components/footer/Footer';
+import Navbar from './components/navbar/navbar';
+import FilterPanel from './components/filterpanel/filterpanel';
+import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
 import { Photo } from './pages/photo/photo';
 
 function App() {
